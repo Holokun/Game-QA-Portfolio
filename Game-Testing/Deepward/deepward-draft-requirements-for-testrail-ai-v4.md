@@ -269,6 +269,8 @@ The following behaviors were observed as possible defects and should be tested s
 
 ## CANDIDATE-BUG-001 — First standing kick may not consume stamina
 
+Professional report: [BUG-DW-001](Bug-reports/BUG-DW-001-first-kick-no-stamina-cost.md)
+
 Observed behavior:
 
 The first standing kick did not consume stamina.
@@ -276,6 +278,8 @@ The first standing kick did not consume stamina.
 This requires reproduction and verification before being treated as a confirmed defect.
 
 ## CANDIDATE-BUG-002 — Repeated kick input may consume stamina without executing kicks
+
+Professional report: [BUG-DW-002](Bug-reports/BUG-DW-002-kick-input-drains-extra-stamina.md)
 
 Observed behavior:
 
@@ -299,6 +303,8 @@ This requires focused testing of:
 - behavior during the kick animation.
 
 ## CANDIDATE-BUG-003 — Potion can be used at full HP
+
+Professional report: [BUG-DW-003](Bug-reports/BUG-DW-003-potion-consumed-at-full-health.md)
 
 Observed behavior:
 

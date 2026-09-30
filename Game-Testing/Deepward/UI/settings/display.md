@@ -60,4 +60,4 @@
 
 ## Evidence
 
-- Display settings screenshot: `display.png`
+- [Display settings screenshot](../../Evidence/screenshots/display.png)

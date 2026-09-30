@@ -57,4 +57,4 @@
 
 ## Evidence
 
-- Graphics settings screenshot: `graphics.png`
+- [Graphics settings screenshot](../../Evidence/screenshots/graphics.png)

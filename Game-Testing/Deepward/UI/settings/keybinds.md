@@ -46,4 +46,4 @@
 
 ## Evidence
 
-- Keybindings screenshot: `keybinds.png`
+- [Keybindings screenshot](../../Evidence/screenshots/keybinds.png)

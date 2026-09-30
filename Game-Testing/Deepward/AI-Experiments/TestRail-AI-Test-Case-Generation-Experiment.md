@@ -192,4 +192,3 @@ The strongest result is not simply that TestRail AI generated 28 cases. It is th
 - [Structured requirements supplied to TestRail AI](../deepward-draft-requirements-for-testrail-ai-v4.md)
 - [TestRail export containing the 25 retained cases](../deepward_playtest_testRailAi.csv)
 - [Candidate defects discovered during exploration](../Bug-reports/bugs.md)
-

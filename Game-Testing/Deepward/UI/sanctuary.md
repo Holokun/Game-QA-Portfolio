@@ -118,9 +118,9 @@
 
 ## Evidence
 
-- Squad hint: `squad-hint.png`
-- Sanctuary with selected squad: `sanctuary-squad.png`
-- Character information: `character-info.png`
-- Hero-selection interface: `hero-selection.png`
-- Selected hero removal control: `hero-removal.png`
-- Squad after hero removal: `squad-after-removal.png`
+- [Squad hint](../Evidence/screenshots/sanctuary/squad-hint.png)
+- [Sanctuary with selected squad](../Evidence/screenshots/sanctuary/sanctuary-squad.png)
+- [Character information](../Evidence/screenshots/sanctuary/character-info.png)
+- [Hero-selection interface](../Evidence/screenshots/sanctuary/hero-selection.png)
+- [Selected hero removal control](../Evidence/screenshots/sanctuary/hero-removal.png)
+- [Squad after hero removal](../Evidence/screenshots/sanctuary/squad-after-removal.png)

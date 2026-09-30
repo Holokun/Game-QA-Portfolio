@@ -39,4 +39,4 @@
 
 ## Evidence
 
-- Settings screenshot: `settings.png`
+- [Settings screenshot](../../Evidence/screenshots/settings.png)
