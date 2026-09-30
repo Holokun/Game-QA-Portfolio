@@ -1,0 +1,208 @@
+ID,Title,AI Model,AI Type,Attachments,Created By,Created On,Estimate,Steps,Expected Result,,Goals,Labels,Mission,Preconditions,Priority,References,Section,Section Depth,Section Description,Section Hierarchy,,Steps,Steps (Additional Info),Steps (Expected Result),Steps (References),Steps (Shared step ID),Steps (Step),Suite,Suite ID,Type,Updated By,Updated On,is_converted
+C3837,Ability Cooldown Persistence During Inactivity,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Select a Player Character (PC) and activate their ability.
+2. Immediately switch to a different PC using the corresponding number key.
+3. Wait for a duration equal to the cooldown time of the ability used by the first PC.
+4. Switch back to the first PC.","After step 1: The ability is activated, and the ability cooldown timer begins.
+After step 2: The player successfully switches control to the new PC.
+After step 3: The cooldown duration passes while the first PC is inactive.
+After step 4: The ability of the first PC is ready to be used again, confirming the cooldown continued to recover while the PC was inactive.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3838,Stamina Recovery During Inactivity,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start an active level and perform actions with the current PC (e.g., sprinting or sliding) until the stamina bar is partially depleted.
+2. Switch to a different PC using the corresponding number key.
+3. Wait for a duration of 5 seconds while controlling the second PC.
+4. Switch back to the first PC after the 3-second switch-back cooldown has expired.
+5. Observe the stamina bar of the first PC.","After step 1: The PC's stamina bar shows a reduced level.
+After step 2: The player is now controlling the second PC, and the first PC is inactive.
+After step 3: The game continues to run, and the inactive PC remains in the level.
+After step 4: The player regains control of the first PC.
+After step 5: The stamina bar of the first PC shows a higher value than it did before the switch, confirming that stamina recovered while the PC was inactive.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3839,Full Resource Restoration on Level Completion,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a new level and intentionally deplete the PC's HP, sanity, stamina, ammunition, ability cooldowns, and healing potion count.
+2. Complete the current level objectives to trigger the level completion sequence.
+3. Observe the status of HP, sanity, stamina, ammunition, abilities, and healing potions after the level is completed.","After step 1: The PC's resources are significantly reduced or exhausted.
+After step 2: The level completion screen or transition is displayed.
+After step 3: All resources (HP, sanity, stamina, ammunition, abilities, and healing potions) are restored to their maximum or starting values.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3840,Resource Recovery During Game Pause,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a level and deplete the active PC's stamina and trigger an ability cooldown.
+2. Switch to a different PC to initiate passive recovery for the first PC.
+3. Immediately open the game pause menu.
+4. Wait for a duration longer than the expected recovery time for the stamina or ability cooldown.
+5. Resume the game and observe the status of the first PC's resources.","After step 1: Stamina is reduced and the ability enters a cooldown state.
+After step 2: The first PC begins passive stamina and ability cooldown recovery.
+After step 3: The game enters a paused state.
+After step 4: The game remains paused and no further recovery progress occurs.
+After step 5: The stamina and ability cooldown values remain at the same levels they were at when the game was paused, confirming that recovery was suspended.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3841,Continuous Hold Input for Healing,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Ensure the active PC has lost HP and has at least one healing potion available.
+2. Press and hold the designated healing input button.
+3. Release the healing input button before the healing animation completes.
+4. Verify the PC's HP status after releasing the button early.
+5. Press and hold the healing input button again until the animation completes.","After step 1: The PC is in a state where healing is required and possible.
+After step 2: The healing animation begins, and the health recovery process starts.
+After step 3: The healing animation stops immediately, and the health recovery process is interrupted.
+After step 4: The PC's HP has not been fully restored, confirming the process was halted.
+After step 5: The healing process resumes or restarts, and the PC's HP is restored upon completion.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3842,Potion Reuse Cooldown Enforcement,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Ensure the active PC has at least two healing potions available and has taken some damage.
+2. Initiate the healing process by holding the healing input until the first potion is consumed.
+3. Immediately attempt to initiate the healing process again by holding the healing input.
+4. Wait for the duration of the potion reuse cooldown and then attempt to initiate the healing process again.","After step 1: The PC is in a state where healing is required and potions are available.
+After step 2: The PC consumes the potion, health is restored, and the potion count decreases by one.
+After step 3: The healing process does not start, and the second potion is not consumed.
+After step 4: The healing process initiates successfully, and the second potion is consumed.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3843,Healing Attempt with Zero Potions,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start an active level and consume all available healing potions until the inventory count reaches 0.
+2. Press and hold the designated healing input.
+3. Observe the UI for feedback regarding the failed healing attempt.
+4. Verify the PC's HP status.","After step 1: The player's healing potion count is confirmed to be 0 in the UI.
+After step 2: The healing process does not initiate; the PC does not perform the healing animation or begin the health recovery process.
+After step 3: The game provides visual or audio feedback indicating that no healing potions are available for use.
+After step 4: The PC's HP remains unchanged, confirming that no healing occurred.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3844,Potion Persistence During Level Play,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a new level and note the current number of available healing potions.
+2. Perform various gameplay actions such as switching between PCs, using abilities, and moving through different areas of the level.
+3. Reach a mid-level checkpoint or trigger a game event without completing the level.
+4. Use one healing potion to reduce the total count.
+5. Continue playing the level without completing it.","After step 1: The initial potion count is displayed correctly in the UI.
+After step 2: The potion count remains unchanged during these actions.
+After step 3: The potion count remains at the same value as it was at the start of the level.
+After step 4: The potion count decreases by one and remains at this new value.
+After step 5: The potion count does not replenish or reset to the initial value while the level is still active.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3845,Basic PC Switching Functionality,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a new expedition with all three PCs available.
+2. Press the '2' key on the keyboard.
+3. Wait for the 3-second switch-back cooldown to expire.
+4. Press the '3' key on the keyboard.
+5. Wait for the 3-second switch-back cooldown to expire.
+6. Press the '1' key on the keyboard.","After step 1: The game initializes with one PC active.
+After step 2: The active PC switches to the character assigned to index 2.
+After step 3: The cooldown period passes.
+After step 4: The active PC switches to the character assigned to index 3.
+After step 5: The cooldown period passes.
+After step 6: The active PC switches to the character assigned to index 1.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3846,Switch-back Cooldown Enforcement,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a new expedition and ensure all three PCs are available.
+2. Switch from the current PC (PC A) to a different PC (PC B) using the corresponding number key.
+3. Immediately attempt to switch back to PC A by pressing the corresponding number key for PC A before 3 seconds have elapsed.
+4. Wait for the remainder of the 3-second cooldown period to expire.
+5. Attempt to switch back to PC A again.","After step 1: The player is in control of the initial PC.
+After step 2: Control successfully switches to PC B.
+After step 3: The switch command is ignored, and the player remains in control of PC B.
+After step 4: The 3-second cooldown for PC A completes.
+After step 5: Control successfully switches to PC A.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3847,Successful Switch-back After Cooldown,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a game session and ensure all three PCs are available.
+2. Switch from the current PC (PC A) to a different PC (PC B) using the corresponding number key.
+3. Attempt to switch back to PC A immediately (within 1-2 seconds) after switching to PC B.
+4. Wait for at least 3 seconds to pass.
+5. Attempt to switch back to PC A using the corresponding number key.","After step 1: The player is in control of the initial PC.
+After step 2: Control switches to PC B; PC A enters a 3-second switch-back cooldown.
+After step 3: The switch to PC A is blocked; the player remains in control of PC B.
+After step 4: The 3-second cooldown for PC A expires.
+After step 5: Control successfully switches back to PC A.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3848,State Reset from Sliding to Standing,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Select a PC and initiate a run.
+2. Press the crouch input while running to trigger the slide animation.
+3. While the PC is in the middle of the slide animation, press the number key (e.g., '2') to switch to a different PC.
+4. Wait for the 3-second switch-back cooldown to expire, then press the number key corresponding to the original PC to switch back.","After step 1: The PC is running.
+After step 2: The PC enters the sliding state.
+After step 3: The game switches control to the selected PC; the previous PC stops sliding and enters a standing state.
+After step 4: Control returns to the original PC, and the PC is in a standing state rather than continuing the previous slide animation.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3849,State Reset from Jumping to Standing,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start an active level with at least two available PCs.
+2. Initiate a jump action with the current PC.
+3. While the PC is in the air, press the key to switch to a different PC.
+4. Wait for the 3-second switch-back cooldown to expire.
+5. Switch back to the original PC that was previously jumping.","After step 1: The player is in control of the first PC.
+After step 2: The PC is in the mid-air jumping animation.
+After step 3: The game switches control to the selected PC; the previously controlled PC is no longer under player control.
+After step 4: The cooldown period passes.
+After step 5: The PC is in a 'standing' state upon becoming active, rather than continuing the jump animation.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3850,PC Permanent Death During Expedition,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a new expedition with all three PCs available.
+2. Select one PC and engage in combat until their HP reaches zero.
+3. Attempt to switch to the dead PC using their corresponding number key.
+4. Complete the current level and proceed to the next level of the same expedition.
+5. Start a completely new expedition.","After step 1: All three PCs are selectable using keys 1, 2, and 3.
+After step 2: The PC enters a dead state and is removed from active play.
+After step 3: The game prevents switching to the dead PC; the active PC remains unchanged.
+After step 4: The dead PC remains unavailable for selection or deployment in the new level.
+After step 5: All three PCs, including the one that died in the previous expedition, are alive and available for selection.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3851,Persistence of PC Death Across Expedition Levels,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a new expedition and confirm all three PCs are available for selection.
+2. Enter a level and intentionally cause one PC (e.g., PC 1) to die.
+3. Complete the current level.
+4. Proceed to the next level of the same expedition.
+5. Attempt to switch to or select the PC that died in the previous level (PC 1).","After step 1: All three PCs are selectable and playable.
+After step 2: PC 1 dies permanently and is removed from the active roster for the remainder of the level.
+After step 3: The level is successfully completed.
+After step 4: The expedition continues to the next level.
+After step 5: The deceased PC (PC 1) remains unavailable for selection or switching throughout the subsequent level.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3852,Slide Mechanic Triggered by Crouch while Running,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Ensure the active PC is in a standing position.
+2. Initiate movement to reach a running state.
+3. Press the crouch input while the PC is actively running.
+4. Press the crouch input while the PC is standing still.","After step 1: The PC is standing and ready for movement.
+After step 2: The PC enters the running animation state.
+After step 3: The PC immediately transitions from the running animation into a slide animation.
+After step 4: The PC performs a standard crouch action instead of a slide, confirming the slide is specific to the running state.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3853,Slide Mechanic Not Triggered while Stationary or Walking,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Ensure the PC is in a standing, stationary position.
+2. Press the crouch input.
+3. Stand up and move the PC forward at a walking pace.
+4. Press the crouch input while walking.","After step 1: The PC is standing still and not performing any movement animations.
+After step 2: The PC enters a crouched state; no slide animation is triggered.
+After step 3: The PC is moving at a walking speed.
+After step 4: The PC enters a crouched state; no slide animation is triggered.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3854,Perk Selection - Standard Choice Presentation,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Complete an active level in the game.
+2. Verify the number and nature of the presented perks.
+3. Select one of the three offered perks.
+4. Check the UI to confirm the perk is active.","After step 1: The level completion screen is displayed, and the player is presented with exactly three perk options.
+After step 2: Exactly three distinct perks are offered for selection.
+After step 3: The selected perk is successfully acquired by the player and added to their active perks list.
+After step 4: The chosen perk is visible in the UI as an active perk.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3855,Perk Selection - Reroll Functionality,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Complete a level to trigger the perk selection screen.
+2. Observe the three offered perks and then select the 'Reroll' option.
+3. Attempt to select the 'Reroll' option a second time during the same perk selection screen.
+4. Select one of the new perks from the rerolled set.","After step 1: The perk selection screen is displayed, showing three randomly offered perks.
+After step 2: The original set of three perks is removed and replaced by a new, randomized set of three distinct perks.
+After step 3: The 'Reroll' option is either disabled or unavailable, as the player is limited to one reroll per selection event.
+After step 4: The selected perk is successfully acquired and added to the player's active perks.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3856,Perk Type - Team Perk Application,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Complete a level to trigger the perk selection screen.
+2. Select a perk explicitly identified as a 'Team Perk' (e.g., Vitality, Iron Mind, Quick Hands, Endurance, or Quick Recovery).
+3. Start the next level and switch between all three available PCs using the number keys (1, 2, 3).
+4. Observe the gameplay performance or UI indicators for each PC to confirm the Team Perk bonus is applied.","After step 1: The perk selection screen appears with three random perk options.
+After step 2: The Team Perk is successfully acquired and added to the team's active perks list.
+After step 3: The effects of the selected Team Perk are observable and active for each PC regardless of which character is currently being controlled.
+After step 4: The Team Perk bonus is consistently active across all three PCs, confirming it is not limited to a single character.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3857,Perk Type - PC-Specific Perk Application,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a new expedition and ensure the PC 'Bruno' and at least one other PC are available in the team.
+2. Complete a level to trigger the perk selection screen.
+3. Select a PC-specific perk associated with 'Bruno' (e.g., Groundbreaker).
+4. Switch to 'Bruno' and verify the effect of the acquired perk is active.
+5. Switch to a different PC (not 'Bruno') and verify if the perk's bonus is active for this character.","After step 1: The team is initialized with all PCs available.
+After step 2: The perk selection screen appears with three random perk options.
+After step 3: The perk is successfully acquired and assigned to 'Bruno'.
+After step 4: The perk's bonus is active and functioning for 'Bruno'.
+After step 5: The perk's bonus is not active or applied to the other PC.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3858,Persistence - Expedition Persistence,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Start a new expedition and complete the first level.
+2. Select a specific perk (e.g., a Team Perk like 'Vitality') and proceed to the next level.
+3. Verify the effect of the selected perk during the second level (e.g., check if the PC's maximum HP has increased if 'Vitality' was chosen).
+4. Complete the second level and proceed to the third level.
+5. Continue playing through multiple levels within the same expedition.","After step 1: The level completion screen is displayed, and the player is offered three random perks.
+After step 2: The selected perk is successfully acquired and added to the player's active perks list.
+After step 3: The perk's effect is active and correctly applied to the PC or team during gameplay.
+After step 4: The previously acquired perk remains visible in the UI and continues to provide its effect in the third level.
+After step 5: All previously acquired perks persist across all levels of the expedition and remain active.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3859,Persistence - Session Restart Persistence,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Launch the game and complete a level to acquire at least one perk.
+2. Note the specific perks currently held by the team/PCs.
+3. Close the game application completely.
+4. Relaunch the game and navigate to the perk menu or character status screen.
+5. Compare the currently active perks with the perks noted before closing the game.","After step 1: The player successfully completes the level and selects a perk. The perk is visible in the UI.
+After step 2: The list of acquired perks is documented or clearly visible in the game's perk menu.
+After step 3: The game process terminates successfully.
+After step 4: The game loads the saved progression data from the local storage.
+After step 5: All previously acquired perks are present and active. No perks are missing or incorrectly reset.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3860,Progression - Perk Rank Up and Exclusion,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Complete a level to trigger the perk selection screen.
+2. Select a Rank I perk from the offered options.
+3. Complete another level to trigger the perk selection screen again.
+4. Observe the available perk options in the selection screen.
+5. Select the Rank II version of the previously acquired perk (if offered).
+6. Complete another level and observe the perk selection screen.","After step 1: The perk selection screen appears, offering three random perks.
+After step 2: The selected perk is acquired and added to the player's active perks list.
+After step 3: The perk selection screen appears.
+After step 4: The previously acquired Rank I perk is not offered again. If a higher rank (e.g., Rank II) of that same perk is available, it may be offered.
+After step 5: The perk is upgraded to Rank II, and the UI reflects the higher rank.
+After step 6: Neither the Rank I nor the Rank II version of the previously acquired perk is offered for selection.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0
+C3861,Progression - Perk Accumulation Limit,,,,Vadim Lebedev,9/28/2026 11:38 AM,,"1. Complete multiple levels to acquire a variety of different perks.
+2. Observe the perk UI after acquiring several distinct perks.
+3. Verify the active status of the accumulated perks during gameplay.
+4. Continue completing levels until a significant number of perks have been accumulated.
+5. Check for any UI conflicts or performance issues when the perk list is populated with multiple entries.","After step 1: The player successfully selects a new perk after each level completion.
+After step 2: The UI displays all previously acquired perks simultaneously without overlapping or disappearing.
+After step 3: All acquired perks remain active and their respective effects are applied to the team or specific PCs as intended.
+After step 4: The system continues to allow the acquisition of new perks, and the UI correctly lists the growing collection of perks.
+After step 5: The perk UI remains functional, readable, and does not crash or display corrupted data when multiple perks are present.",,,,,,Medium,,Test Cases,0,,Test Cases,,,,,,,,Master,S9,Other,Vadim Lebedev,9/28/2026 11:38 AM,0

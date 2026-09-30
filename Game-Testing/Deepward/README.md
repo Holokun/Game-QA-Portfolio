@@ -41,3 +41,15 @@ Issues found: XX
 Critical: X
 Major: X
 Minor: X
+
+## AI-Assisted Test Design
+
+I evaluated TestRail AI using gameplay requirements derived from a 30-minute exploratory testing session.
+
+- 28 test cases generated
+- 23 accepted without changes
+- 2 corrected after human review
+- 3 rejected
+- 89.3% usable after review
+
+Read the full portfolio case study: [TestRail AI Test Case Generation Evaluation](AI-Experiments/TestRail-AI-Test-Case-Generation-Experiment.md)
